@@ -26,15 +26,20 @@ public class SecondMain {
             String siglaBuscar = leitor.next();
 
             //Busca Linear: vai procurar desde primeira até a ultima perguntando se é o contéudo que você está buscando.(Porém a busca linear não é uma busca rapida.)
+            boolean encontrou = false;
 
-            for(int i =0; i < estados.length; i++){
+            for(int i = 0; i < estados.length; i++){
+
                String elemento = estados[i];
                if (elemento.equals(siglaBuscar)){
-                System.out.println("Achoooou!!!!!");
+               encontrou = true;
                 break;
-               }else{
-                System.out.println("Não Achou ");
                }
+            }
+            if(encontrou == true){
+                System.out.println("ENCONTROU");
+            }else{
+                System.out.println("NAO ENCONTROU");
             }
         }
     }
